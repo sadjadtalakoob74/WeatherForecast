@@ -52,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
                 cityname = editText.getText().toString();
 
-                //Toast.makeText(MainActivity.this, "cityName is:" + cityname, Toast.LENGTH_SHORT).show();
-
                 RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
                 String url = "https://www.metaweather.com/api/location/search/?query=" + cityname;
 
@@ -87,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-// Add the request to the RequestQueue.
                 queue.add(stringRequest);
             }
         });
